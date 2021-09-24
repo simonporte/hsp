@@ -1,4 +1,15 @@
-## SUI
+## HSP - Homelab StartPage
+
+This is a fork of [jeroenpardon/sui](https://github.com/jeroenpardon/sui), intended to fix its most obvious issues/limitations and add more features.
+
+The readme will be updated to reflect the changes that are made or planned.
+
+Please feel free to open an issue if you have any request or suggestion.
+
+Pull Request are wellcome but I would prefer that you open an issue first.
+
+---
+
 *a startpage for your server and / or new tab page*
 
 ![screenshot](https://i.imgur.com/J4d7Q3D.png)
