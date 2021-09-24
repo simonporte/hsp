@@ -91,7 +91,7 @@ a:hover{
 input{
 	background-color: transparent;
 	border: 0;
-	border-bottom: thin solid var(--color-text-acc);
+	border-bottom: thin solid var(--color-text-acc,black);
 	color: var(--color-text-pri);
 	font-size: 0.8em;
 	height: 3.5em;
