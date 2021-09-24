@@ -1,6 +1,9 @@
 function fetchAndRender (name) {
-    fetch(name + '.json')
-        .then(response => response.json())
+	fetch(name + '.yml')
+    // fetch(name + '.json')
+        // .then(response => response.json())
+		.then(response => response.text())
+		.then(rawyaml => YAML.parse(rawyaml))
         .then(data => {
             const mysource = document.getElementById(name + '-template').innerHTML;
             const mytemplate = Handlebars.compile(mysource);

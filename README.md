@@ -8,6 +8,12 @@ Please feel free to open an issue if you have any request or suggestion.
 
 Pull Request are wellcome but I would prefer that you open an issue first.
 
+Main changes :
+
+- Configuration files changed from JSON to YAML
+
+YAML library used: [jeremyfa/yaml.js](https://github.com/jeremyfa/yaml.js)
+
 ---
 
 *a startpage for your server and / or new tab page*
