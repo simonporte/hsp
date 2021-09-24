@@ -1,8 +1,8 @@
 html{
 	box-sizing: border-box;
-	moz-box-sizing: border-box;
-	webkit-box-sizing: border-box;
-	webkit-text-size-adjust: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-text-size-adjust: none;
 }
 
 html,
@@ -16,7 +16,7 @@ body{
 	letter-spacing: -.012em;
 	margin: 0;
 	padding: 0;
-	webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
 	width: 100vw;
 }
 
@@ -24,8 +24,8 @@ body{
 *:before,
 *:after{
 	box-sizing: inherit;
-	moz-box-sizing: inherit;
-	webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	-webkit-box-sizing: inherit;
 }
 
 :root{
@@ -77,8 +77,8 @@ a{
 
 a:hover{
 	text-decoration: underline;
-	webkit-text-decoration-color: var(--color-text-acc);
-	webkit-text-decoration-skip: true;
+	-webkit-text-decoration-color: var(--color-text-acc);
+	-webkit-text-decoration-skip: true;
 }
 
 .icon{
@@ -257,7 +257,7 @@ table a{
 #links_item{
 	line-height: 1.5rem;
 	margin-bottom: 2em;
-	webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
 }
 
 #links_item h4{
