@@ -254,17 +254,17 @@ table a{
 	grid-template-rows: auto;
 }
 
-#links_item{
+.links_item{
 	line-height: 1.5rem;
 	margin-bottom: 2em;
 	-webkit-font-smoothing: antialiased;
 }
 
-#links_item h4{
+.links_item h4{
 	color: var(--color-text-acc);
 }
 
-#links_item a{
+.links_item a{
 	display: block;
 	line-height: 2;
 }
@@ -552,7 +552,7 @@ table a{
 
 /* Small Screens */
 @media only screen and (max-width: 400px) {
-	#app-address {
+	.app-address {
 		display: none;
 	}
 }

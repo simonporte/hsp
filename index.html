@@ -87,7 +87,7 @@
                         </div>
                         <div class="apps_text">
                             <a href="https://{{url}}" {{#if target}}target="{{target}}"{{/if}} >{{name}}</a>
-                            <span id="app-address">{{url}}</span>
+                            <span class="app-address">{{url}}</span>
                         </div>
                     </div>
                 {{/apps}}
@@ -100,7 +100,7 @@
             <h3>Bookmarks</h3>
             <div id="links_loop">
                 {{#bookmarks}}
-                    <div id="links_item">
+                    <div class="links_item">
                         <h4>{{category}}</h4>
                         {{#links}}
                             <a href="{{url}}" target="{{target}}" class="theme_color-border theme_text-select">{{name}}</a>
