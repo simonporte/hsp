@@ -91,7 +91,7 @@ a:hover{
 input{
 	background-color: transparent;
 	border: 0;
-	border-bottom: thin solid var(--color-text-acc,black);
+	border-bottom: thin solid var(--color-text-pri,black);
 	color: var(--color-text-pri);
 	font-size: 0.8em;
 	height: 3.5em;
@@ -100,7 +100,7 @@ input{
 }
 
 input:focus{
-	color-border: var(--color-text-pri);
+	border-color: var(--color-text-acc);
 	outline: none;
 }
 
