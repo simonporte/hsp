@@ -180,7 +180,7 @@ table a{
 	justify-items: stretch;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 5vh;
+	padding-top: 5vh;
 	width: 60%;
 }
 
