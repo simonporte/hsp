@@ -355,10 +355,11 @@ table a{
 }
 
 #modal_init a{
-    bottom: 1vh;
+    top: 1vh;
     color: var(--color-text-acc);
-    left: 1vw;
+    right: 1vh;
     position: fixed;
+    font-size: 0.8em;
 }
 
 #modal_init a:hover{
