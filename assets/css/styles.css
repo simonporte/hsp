@@ -17,7 +17,7 @@ body{
 	margin: 0;
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
-	width: 100vw;
+	width: 100%;
 }
 
 *,
@@ -470,7 +470,7 @@ table a{
     
 	#apps_loop{
 		grid-template-columns: 1fr 1fr 1fr;
-		width: 100vw;
+		width: 100%;
 	}
 
 	#links_loop	{
@@ -488,7 +488,7 @@ table a{
 @media screen and (max-width: 667px)
 {
 	html{
-		font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+		font-size: calc(16px + 6 * ((100% - 320px) / 680));
 	}
 
 	#container{
@@ -523,7 +523,7 @@ table a{
 		grid-column-gap: 0px;
 		grid-row-gap: 0px;
 		grid-template-columns: 1fr 1fr;
-		width: 100vw;
+		width: 100%;
 	}
 
 	.apps_icon{
