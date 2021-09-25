@@ -75,10 +75,8 @@ a{
 	text-decoration: none;
 }
 
-a:hover{
+a:hover .app-name, .links_item a:hover{
 	text-decoration: underline;
-	-webkit-text-decoration-color: var(--color-text-acc);
-	-webkit-text-decoration-skip: true;
 }
 
 .icon{
@@ -198,7 +196,7 @@ table a{
 #apps_loop{
 	border-bottom: 0px solid var(--color-text-acc);
 	display: grid;
-	grid-column-gap: 0px;
+	grid-column-gap: 20px;
 	grid-row-gap: 0px;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 64px;
@@ -230,18 +228,17 @@ table a{
 	justify-content: center;
 	flex: 1;
 	overflow: hidden;
+	text-transform: uppercase;
 }
 
-.apps_text a{
+.apps_text .app-name{
 	font-size: 1em;
 	font-weight: 500;
-	text-transform: uppercase;
 }
 
-.apps_text span{
+.apps_text .app-address{
 	color: var(--color-text-acc);
 	font-size: 0.8em;
-	text-transform: uppercase;
 }
 
 
