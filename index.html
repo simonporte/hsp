@@ -23,24 +23,18 @@
                 </a>
             </header>
 
-			<div id="modal-content">
-				<h2>Color themes</h2>
+            <div id="modal-content">
+                <h2>Color themes</h2>
 
-				<div id="modal-theme">
-					<button data-theme="blackboard" class="theme-button theme-blackboard">Blackboard</button>
-					<button data-theme="gazette" class="theme-button theme-gazette">Gazette</button>
-					<button data-theme="espresso" class="theme-button theme-espresso">Espresso</button>
-					<button data-theme="cab" class="theme-button theme-cab">Cab</button>
-					<button data-theme="cloud" class="theme-button theme-cloud">Cloud</button>
-					<button data-theme="lime" class="theme-button theme-lime">Lime</button>
-					<button data-theme="passion" class="theme-button theme-passion">Passion</button>
-					<button data-theme="blues" class="theme-button theme-blues">Blues</button>
-					<button data-theme="chalk" class="theme-button theme-chalk">Chalk</button>
-					<button data-theme="tron" class="theme-button theme-tron">Tron</button>
-					<button data-theme="paper" class="theme-button theme-paper">Paper</button>
-				</div>
+                <section id="themes">
+                    <script type="text/handlebars-template" id="themes-template">
+                        {{#themes}}
+                        <button onclick="setTheme({'color-background': '{{colors.background}}','color-text-pri': '{{colors.primary}}','color-text-acc': '{{colors.accent}}'});" data-theme="{{id}}" class="theme-button" style="background-color: {{colors.background}}; border-color: {{colors.accent}}; color: {{colors.primary}};">{{name}}</button>      
+                        {{/themes}}    
+                    </script>
+                </section>
 
-				<h2>Search options</h2>
+                <h2>Search options</h2>
 
 				<section id="providers">
 					<script type="text/handlebars-template" id="providers-template">

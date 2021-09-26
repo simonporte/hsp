@@ -1,0 +1,67 @@
+themes:
+  - id: "blackboard"
+    name: "Blackboard"
+    colors:
+      background: "#1a1a1a"
+      primary: "#fffdea"
+      accent: "#5c5c5c"
+  - id: "gazette"
+    name: "Gazette"
+    colors:
+      background: "#f2f7ff"
+      primary: "#000000"
+      accent: "#5c5c5c"
+  - id: "espresso"
+    name: "Espresso"
+    colors:
+      background: "#21211f"
+      primary: "#d1b59a"
+      accent: "#4e4e4e"
+  - id: "cab"
+    name: "Cab"
+    colors:
+      background: "#f6d305"
+      primary: "#1f1f1f"
+      accent: "#424242"
+  - id: "cloud"
+    name: "Cloud"
+    colors:
+      background: "#f1f2f0"
+      primary: "#35342f"
+      accent: "#37bbe4"
+  - id: "lime"
+    name: "Lime"
+    colors:
+      background: "#263238"
+      primary: "#aabbc3"
+      accent: "#aeea00"
+  - id: "passion"
+    name: "Passion"
+    colors:
+      background: "#f5f5f5"
+      primary: "#12005e"
+      accent: "#8e24aa"
+  - id: "blues"
+    name: "Blues"
+    colors:
+      background: "#2b2c56"
+      primary: "#eff1fc"
+      accent: "#6677eb"
+  - id: "chalk"
+    name: "Chalk"
+    colors:
+      background: "#263238"
+      primary: "#aabbc3"
+      accent: "#ff869a"
+  - id: "tron"
+    name: "Tron"
+    colors:
+      background: "#242b33"
+      primary: "#effbff"
+      accent: "#6ee2ff"
+  - id: "paper"
+    name: "Paper"
+    colors:
+      background: "#f8f6f1"
+      primary: "#4c432e"
+      accent: "#aa9a73"
