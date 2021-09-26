@@ -6,11 +6,23 @@ The readme will be updated to reflect the changes that are made or planned.
 
 Please feel free to open an issue if you have any request or suggestion.
 
-Pull Request are wellcome but I would prefer that you open an issue first.
+Pull Request are welcome but I would prefer that you open an issue first.
 
 Main changes :
 
 - Configuration files changed from JSON to YAML
+- Icon of modal is top right instead of bottom left
+- Theme is applied to modal
+
+Visual comparison:
+
+Project|Startpage|Modal
+-|-|-
+HSP|![msedge_I5g2eORykU](https://user-images.githubusercontent.com/32496803/134809624-c21f29c8-c9f6-429c-b09b-7d02de9c7f32.png)|![msedge_lwmod45PFb](https://user-images.githubusercontent.com/32496803/134809371-e37075d1-0a8a-4be7-87a6-99b3a1e7f776.png)
+SUI|![msedge_xqXs2wrICG](https://user-images.githubusercontent.com/32496803/134809359-5baee52c-b57e-400f-9ecd-8344074a8909.png)|![msedge_rrEsBrjewZ](https://user-images.githubusercontent.com/32496803/134809362-791d076f-d89c-46e7-b479-c8b8011184da.png)
+
+
+
 
 YAML library used: [jeremyfa/yaml.js](https://github.com/jeremyfa/yaml.js)
 
