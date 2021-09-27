@@ -1,5 +1,5 @@
 function fetchAndRender (name) {
-	fetch(name + '.yml')
+	fetch('assets/' + name + '.yml')
     // fetch(name + '.json')
         // .then(response => response.json())
 		.then(response => response.text())
