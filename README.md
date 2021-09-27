@@ -13,7 +13,8 @@ Main changes :
 - Configuration files changed from JSON to YAML
 - Icon of modal is top right instead of bottom left
 - Theme is applied to modal
-- Themes are no longer hard-coded but set in a dedicated configuration file : `themes.yml`
+- Themes list is no longer hard-coded but set in a dedicated configuration file : `themes.yml`
+- HTTPS is not forced, HTTP/HTTPS is set for each app URL
 
 Visual comparison:
 

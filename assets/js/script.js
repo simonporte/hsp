@@ -34,4 +34,6 @@ function loadFunctions() {
   greet();
 }
 
-
+Handlebars.registerHelper('strip-protocol', function (url) {
+	return url.replace(/.*[/]{2}/s,'')
+})
