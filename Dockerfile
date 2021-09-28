@@ -1,11 +1,10 @@
-FROM busybox
+FROM alpine:3.14
 
-LABEL maintainer="Jeroen Pardon"
+RUN apk add --no-cache darkhttpd
 
-WORKDIR /opt/html
-
-COPY . /opt/html
+COPY src /www/src
+COPY index.html /www/
+COPY entrypoint.sh /
 
 EXPOSE 80
-
-ENTRYPOINT [ "httpd", "-f", "-v", "-u", "1000" ]
+ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]

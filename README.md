@@ -15,6 +15,7 @@ Main changes :
 - Theme is applied to modal
 - Themes list is no longer hard-coded but set in a dedicated configuration file : `themes.yml`
 - HTTPS is not forced, HTTP/HTTPS is set for each app URL
+- Docker image use darkhttpd instead of busybox httpd
 
 Visual comparison:
 
