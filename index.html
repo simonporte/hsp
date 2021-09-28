@@ -36,23 +36,23 @@
 
                 <h2>Search options</h2>
 
-				<section id="search-engines">
-					<script type="text/handlebars-template" id="search-engines-template">
-						<table>
-							<tr>
-								<th>Website</th>
-								<th>Prefix</th>
-							</tr>
-							{{#providers}}
-							<tr>
-								<td><a href="{{url}}">{{name}}</a></td>
-								<td>{{prefix}}</td>
-							</tr>
-							{{/providers}}
-						</table>
-					</script>
-				</section>
-			</div>
+                <section id="search-engines">
+                    <script type="text/handlebars-template" id="search-engines-template">
+                        <table>
+                            <tr>
+                                <th>Website</th>
+                                <th>Prefix</th>
+                            </tr>
+                            {{#providers}}
+                            <tr>
+                                <td><a href="{{url}}">{{name}}</a></td>
+                                <td>{{prefix}}</td>
+                            </tr>
+                            {{/providers}}
+                        </table>
+                    </script>
+                </section>
+            </div>
 
             <footer id="modal-footer">
                 <a href="https://github.com/jeroenpardon/"><span class="iconify btn" data-icon="mdi-github-box"></span></a>
@@ -74,9 +74,10 @@
 
         <section id="apps">
             <script type="text/handlebars-template" id="apps-template">
-            <h3>Applications</h3>
-            <div id="apps_loop">
-                {{#apps}}
+            {{#apps}}
+            <h3>{{category}}</h3>
+            <div class="apps_loop">
+                {{#links}}
                 <a href="{{url}}" {{#if target}}target="{{target}}"{{/if}} >
                     <div class="apps_item">
                         <div class="apps_icon">
@@ -88,24 +89,27 @@
                         </div>
                     </div>
                 </a>
-                {{/apps}}
+                {{/links}}
             </div>
+            {{/apps}}
             </script>
         </section>
 
          <section id="bookmarks">
             <script type="text/handlebars-template" id="bookmarks-template">
-            <h3>Bookmarks</h3>
-            <div id="links_loop">
-                {{#bookmarks}}
-                    <div class="links_item">
-                        <h4>{{category}}</h4>
-                        {{#links}}
-                            <a href="{{url}}" target="{{target}}" class="theme_color-border theme_text-select">{{name}}</a>
-                        {{/links}}
-                    </div>
-                {{/bookmarks}}
+            {{#bookmarks}}
+            <h3>{{category}}</h3>
+            <div class="links_loop">
+                {{#collections}}
+                <div class="links_item">
+                    <h4>{{title}}</h4>
+                    {{#links}}
+                    <a href="{{url}}" target="{{target}}" class="theme_color-border theme_text-select">{{name}}</a>
+                    {{/links}}
+                </div>
+                {{/collections}}
             </div>
+            {{/bookmarks}}
             </script>
         </section>
     </main>
