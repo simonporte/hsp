@@ -17,6 +17,7 @@ Main changes :
 - HTTPS is not forced, HTTP/HTTPS is set for each app URL
 - Docker image use darkhttpd instead of busybox httpd
 - Can have multiple categories for apps and bookmarks (optional)
+- Can use image files instead of being limited to material design icons
 
 Visual comparison:
 
@@ -25,6 +26,7 @@ Project|HSP|SUI
 Startpage|![msedge_I5g2eORykU](https://user-images.githubusercontent.com/32496803/134809624-c21f29c8-c9f6-429c-b09b-7d02de9c7f32.png)|![msedge_xqXs2wrICG](https://user-images.githubusercontent.com/32496803/134809359-5baee52c-b57e-400f-9ecd-8344074a8909.png)
 Modal|![msedge_lwmod45PFb](https://user-images.githubusercontent.com/32496803/134809371-e37075d1-0a8a-4be7-87a6-99b3a1e7f776.png)|![msedge_rrEsBrjewZ](https://user-images.githubusercontent.com/32496803/134809362-791d076f-d89c-46e7-b479-c8b8011184da.png)
 Multiple categories|![msedge_RNRPBs6hzG](https://user-images.githubusercontent.com/32496803/135135100-aa87d629-f822-4545-808a-099a4c408274.png)|Feature not available
+Custom icons|![msedge_2WCbZh0NCL](https://user-images.githubusercontent.com/79142547/135339255-a11ff772-3558-4e10-947d-1049eb3d1295.png)|Feature not available
 
 
 

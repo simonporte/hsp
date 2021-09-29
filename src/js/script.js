@@ -35,5 +35,13 @@ function loadFunctions() {
 }
 
 Handlebars.registerHelper('strip-protocol', function (url) {
-	return url.replace(/.*[/]{2}/s,'')
+    return url.replace(/.*[/]{2}/s,'')
+})
+
+Handlebars.registerHelper('isAsset', function (icon) {
+    // The logic here is perhaps a bit too simplistic
+    // Check the presence of a dot in icon name
+    // so we know it is a .png, .jpg, .svg, etc.
+    let match = icon.toString().match(/[.]/g);
+    return match;
 })

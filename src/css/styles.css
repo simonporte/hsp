@@ -83,6 +83,12 @@ a:hover .app-name, .links_item a:hover{
     font-size: 2.5em;
 }
 
+img.icon{
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
 .btn{
     font-size:2em;
     color: var(--color-text-pri);

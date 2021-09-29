@@ -81,7 +81,11 @@
                 <a href="{{url}}" {{#if target}}target="{{target}}"{{/if}} >
                     <div class="apps_item">
                         <div class="apps_icon">
+                            {{#if (isAsset icon)}}
+                            <img src="assets/icons/{{icon}}" class="icon" title="{{name}}">
+                            {{else}}
                             <span class="iconify icon" data-icon="mdi-{{icon}}"></span>
+                            {{/if}}
                         </div>
                         <div class="apps_text">
                             <span class="app-name">{{name}}</span>
