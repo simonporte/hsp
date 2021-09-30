@@ -45,3 +45,10 @@ Handlebars.registerHelper('isAsset', function (icon) {
     let match = icon.toString().match(/[.]/g);
     return match;
 })
+
+// Close modal if click outside
+document.getElementById('modal').onclick = function(e) {
+    if (!document.getElementById('modal-container').contains(e.target)){
+        window.location = "#";
+    }
+}
