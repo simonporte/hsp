@@ -1,6 +1,115 @@
 ## HSP - Homelab StartPage
 
-This is a fork of [jeroenpardon/sui](https://github.com/jeroenpardon/sui), intended to fix its most obvious issues/limitations and add more features.
+*A home page for your server, that can be used as a new tab page*
+
+![screenshot](https://user-images.githubusercontent.com/32496803/135909895-da657913-edf5-443a-9449-7d76fb2e0f89.png)
+
+[Available themes](https://imgur.com/a/FDVRIyw) - *Please note those screenshots are from original SUI and do not reflect all changes.*
+
+## Set as new tab page
+
+Install an extension such as [New Tab Redirect
+](https://github.com/jimschubert/NewTab-Redirect) available in [Chrome Web Store](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna?hl=en)
+
+## Installation
+
+### Docker-compose
+
+ - `git clone` this repository
+ - Build and bring up with `docker-compose up -d`
+ - The page should be available at `http://localhost:4000`
+
+To run at a different port from 4000 or change the assets directory location, edit `docker-compose.yml` (change left values):
+
+```yaml
+    ports:
+      - 4000:80
+    volumes:
+      - ./assets:/www/assets
+```
+
+### Web server
+
+You can use your own web server, just put the files as is and it should be good as long as you follow the directions below.
+
+## Configuration
+
+Copy all the configuration files from `src`>`default-assets` to `assets`. You can alse use `example-assets` for specific use cases.
+
+If you use docker to run the page, the `entrypoint.sh` script does take care of this for you.
+
+All the configuration files mentioned below are those in `assets` directory.
+
+### Applications
+
+Add your apps by editing your copy of `apps.yml`:
+
+```yaml
+apps:
+  - category: "Applications"
+    links:
+      - name: "Bazarr"
+        url: "http://subs.example.com"
+        icon: "message-video"
+        target: "_blank"
+```
+
+Please note:
+
+- You can use only one category if you want
+- Set `http://` or `https://` in the URL
+- Images must be in `assets`>`icons`, just put the full name of the image with extension : e.g. `myimage.png`
+- Instead, if you want to use an icon from the Material Design Icons library, find its name [here](https://materialdesignicons.com/)
+
+### Bookmarks
+
+Add your bookmarks by editing your copy of `links.yml`:
+
+```yaml
+bookmarks:
+  - category: "Bookmarks"
+    collections:
+      - title: "Communicate"
+        links:
+          - name: "Discord"
+            url: "https://discord.com"
+          - name: "Gmail"
+            url: "http://gmail.com"
+          - name: "Slack"
+            url: "https://slack.com/signin"
+            target: "_blank"
+```
+
+Please note:
+
+- You can use only one category if you want
+- Set the title for each collection of bookmarks in a category
+- Set `http://` or `https://` in the URL
+
+## Themes
+
+### Changing color themes
+
+Click the cog button on the top right
+
+### Add you own themes
+
+These can be added in the `themes.yml` file. When changing the values of a theme, you need to reapply it from the menu.
+
+```yaml
+themes:
+  - id: "blackboard"
+    name: "Blackboard"
+    colors:
+      background: "#1a1a1a"
+      primary: "#fffdea"
+      accent: "#5c5c5c"
+```
+
+
+---
+
+This project is a fork of [jeroenpardon/sui](https://github.com/jeroenpardon/sui), intended to fix its most obvious issues/limitations and add more features.
 
 The readme will be updated to reflect the changes that are made or planned.
 
@@ -34,100 +143,3 @@ Custom icons|![msedge_2WCbZh0NCL](https://user-images.githubusercontent.com/7914
 YAML library used: [jeremyfa/yaml.js](https://github.com/jeremyfa/yaml.js)
 
 ---
-
-*a startpage for your server and / or new tab page*
-
-![screenshot](https://i.imgur.com/J4d7Q3D.png)
-
-[More screenshots](https://imgur.com/a/FDVRIyw)
-
-### Deploy with Docker compose
-
-#### Prerequisites:
- - Docker: [Linux](https://docs.docker.com/install/linux/docker-ce/debian/), [Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac), [Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
- - [Docker-compose](https://docs.docker.com/compose/install/)
-
-#### Install:
-
- - `git clone` this repository
- - Build and bring up with `docker-compose up -d`
- - The page should be available at  `http://localhost:4000`
-
-To run at a different port open edit docker-compose.yml:
-
-    ports:
-          - 4000:80
-
-### Customization
-
-#### Changing color themes
- - Click the options button on the left bottom
-
-#### Apps
-Add your apps by editing apps.json:
-
-    {
-	    "apps" : [
-		    {"name":"Name of app 1","url":"sub1.example.com","icon":"icon-name"},
-		    {"name":"Name of app 2","url":"sub2.example.com","icon":"icon-name","target":"optionals"}
-	    ]
-    }
-
-Please note:
-
- - No `http://` in the URL
- - No `,` at the end of the last app's line
- - Find the names  of icons to use at [Material Design Icons](https://materialdesignicons.com/)
-
-#### Bookmarks
-Add your bookmarks by editing links.json:
-
-```
-{
-   "bookmarks":[
-      {
-         "category":"Category1",
-         "links":[
-            {
-               "name":"Link1",
-               "url":"http://example.com"
-            },
-            {
-               "name":"Link2",
-               "url":"http://example.com",
-               "target":"optionals"
-            }
-         ]
-      },
-      {
-         "category":"Category2",
-         "links":[
-            {
-               "name":"Link1",
-               "url":"http://example.com"
-            },
-            {
-               "name":"Link2",
-               "url":"http://example.com"
-            }
-         ]
-      }
-   ]
-}
-```
-Add names for the categories you wish to define and add the bookmarks for each category.
-
-Please note:
-
- - No `http://` in the URL
- - No `,` at the end of the last bookmark in a category and at the end of the last category
-
-
-#### Color themes
-These can be added or customized in the themer.js file. When changing the name of a theme or adding one, make sure to edit this section in index.html accordingly:
-
-```
-    <section  class="themes">
-```
-
-I might add a simpler way to edit themes at some point, but adding the current ones should be pretty straight forward.
