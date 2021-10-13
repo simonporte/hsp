@@ -104,7 +104,8 @@ img.icon{
 input{
     background-color: transparent;
     border: 0;
-    border-bottom: thin solid var(--color-text-pri,black);
+    border-radius: 0;
+    box-shadow: 0 1px 0 0 var(--color-text-pri,black);
     color: var(--color-text-pri);
     font-size: 0.8em;
     height: 3.5em;
@@ -113,12 +114,8 @@ input{
 }
 
 input:focus{
-    border-color: var(--color-text-acc);
+    box-shadow: 0 1px 0 0 var(--color-text-acc);
     outline: none;
-}
-
-input:focus{
-    opacity: 1;
 }
 
 
