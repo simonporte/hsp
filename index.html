@@ -29,7 +29,16 @@
                 <section id="themes">
                     <script type="text/handlebars-template" id="themes-template">
                         {{#themes}}
-                        <button onclick="setTheme({'color-background': '{{colors.background}}','color-text-pri': '{{colors.primary}}','color-text-acc': '{{colors.accent}}'});" data-theme="{{id}}" class="theme-button" style="background-color: {{colors.background}}; border-color: {{colors.accent}}; color: {{colors.primary}};">{{name}}</button>      
+                        <div data-theme="{{id}}" class="color-scheme theme-{{id}}" onclick="setTheme({'color-background': '{{colors.background}}','color-text-pri': '{{colors.primary}}','color-text-acc': '{{colors.accent}}'});">
+                            <div class="palette">
+                                <span class="palette-color" style="background-color: {{colors.background}};"></span>
+                                <span class="palette-color" style="background-color: {{colors.primary}};"></span>
+                                <span class="palette-color" style="background-color: {{colors.accent}};"></span>
+                            </div>
+                            <div class="palette-label">
+                                {{{name}}}
+                            </div>
+                        </div>   
                         {{/themes}}    
                     </script>
                 </section>
