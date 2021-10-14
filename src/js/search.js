@@ -59,11 +59,11 @@ function search(text) {
                 case "am":
                     window.location = "https://www.allmusic.com/search/all/" + subtext;
                     break;
-                case "d":
-                    window.location = "https://duckduckgo.com/?q=" + subtext;
-                    break;
                 case "di":
                     window.location = "https://www.discogs.com/search/?q=" + subtext;
+                    break;
+                case "d":
+                    window.location = "https://duckduckgo.com/?q=" + subtext;
                     break;
                 case "i":
                     window.location = "https://www.imdb.com/find?q=" + subtext;
