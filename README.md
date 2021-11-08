@@ -28,6 +28,8 @@ To run at a different port from 4000 or change the assets directory location, ed
       - ./assets:/www/assets
 ```
 
+For production purposes, it is advised to rename and replace `dockerfile.prod` to `dockerfile` and `docker-compose.prod.yml` to `docker-compose.yml`.
+
 ### Web server
 
 You can use your own web server, just put the files as is and it should be good as long as you follow the directions below.
