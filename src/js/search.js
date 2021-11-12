@@ -56,6 +56,9 @@ function search(text) {
     if (text[0] === '/') {
         if (text.indexOf(' ') > -1) {
             switch (option) {
+                case "at":
+                    window.location = "https://alternativeto.net/browse/search?q=" + subtext;
+                    break;
                 case "am":
                     window.location = "https://www.allmusic.com/search/all/" + subtext;
                     break;
@@ -65,11 +68,17 @@ function search(text) {
                 case "d":
                     window.location = "https://duckduckgo.com/?q=" + subtext;
                     break;
+                case "gh":
+                    window.location = "https://github.com/search?q=" + subtext;
+                    break;
                 case "i":
                     window.location = "https://www.imdb.com/find?q=" + subtext;
                     break;
                 case "m":
                     window.location = "https://www.themoviedb.org/search?query=" + subtext;
+                    break;
+                case "o":
+                    window.location = "https://www.opensubtitles.org/?MovieName=" + subtext;
                     break;
                 case "r":
                     window.location = "https://www.reddit.com/search?q=" + subtext;
