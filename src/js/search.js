@@ -43,81 +43,49 @@ function handleKeyPress(e) {
             }
         }
     }
-    if(key == 32){ //Space to go to search
-        document.getElementById("keywords").focus();
-    }
+    // if(key == 32){ //Space to go to search
+        // document.getElementById("keywords").focus();
+    // }
     sindex = 0;
     cycle = false;
 }
 
+let providers = [
+	['at' ,'https://alternativeto.net/'     ,'browse/search?q='],
+	['am' ,'https://www.allmusic.com/'      ,'search/all/'],
+	['di' ,'https://www.discogs.com/'       ,'search/?q='],
+	['d'  ,'https://duckduckgo.com/'        ,'?q='],
+	['g'  ,'https://www.google.com/'        ,'search?q='], //this one is the default if no shortcut is used
+	['gh' ,'https://github.com/'            ,'search?q='],
+	['i'  ,'https://www.imdb.com/'          ,'find?q='],
+	['m'  ,'https://www.themoviedb.org/'    ,'search?query='],
+	['o'  ,'https://www.opensubtitles.org/' ,'?MovieName='],
+	['r'  ,'https://www.reddit.com/'        ,'search?q='],
+	['q'  ,'https://www.qwant.com/'         ,'?q='],
+	['so' ,'https://soundcloud.com/'        ,'search?q='],
+	['s'  ,'https://open.spotify.com/'      ,'search/results/'],
+	['t'  ,'https://trakt.tv/'              ,'search?query='],
+	['tv' ,'https://www.thetvdb.com/'       ,'search?query='],
+	['y'  ,'https://www.youtube.com/'       ,'results?search_query=']
+];
+
 function search(text) {
     var option = text.substr(1, text.indexOf(' ') - 1) || text.substr(1);
     var subtext = text.substr(2 + option.length);
-    if (text[0] === '/') {
-        if (text.indexOf(' ') > -1) {
-            switch (option) {
-                case "at":
-                    window.location = "https://alternativeto.net/browse/search?q=" + subtext;
-                    break;
-                case "am":
-                    window.location = "https://www.allmusic.com/search/all/" + subtext;
-                    break;
-                case "di":
-                    window.location = "https://www.discogs.com/search/?q=" + subtext;
-                    break;
-                case "d":
-                    window.location = "https://duckduckgo.com/?q=" + subtext;
-                    break;
-                case "gh":
-                    window.location = "https://github.com/search?q=" + subtext;
-                    break;
-                case "i":
-                    window.location = "https://www.imdb.com/find?q=" + subtext;
-                    break;
-                case "m":
-                    window.location = "https://www.themoviedb.org/search?query=" + subtext;
-                    break;
-                case "o":
-                    window.location = "https://www.opensubtitles.org/?MovieName=" + subtext;
-                    break;
-                case "r":
-                    window.location = "https://www.reddit.com/search?q=" + subtext;
-                    break;
-                case "q":
-                    window.location = "https://www.qwant.com/?q=" + subtext;
-                    break;
-                case "so":
-                    window.location = "https://soundcloud.com/search?q=" + subtext;
-                    break;
-                case "s":
-                    window.location = "https://open.spotify.com/search/results/" + subtext;
-                    break;
-                case "t":
-                    window.location = "https://trakt.tv/search?query=" + subtext;
-                    break;
-                case "tv":
-                    window.location = "https://www.thetvdb.com/search?query=" + subtext;
-                    break;
-                case "y":
-                    window.location = "https://www.youtube.com/results?search_query=" + subtext;
-                    break;
-            }
-        } else {
+    if (text[0] === '!') { // Type !shortcut
+        if (text.indexOf(' ') > -1) { // Then a space
+			providers.forEach(p => {
+				if (option == p[0]) {
+					window.location = p[1] + p[2] + subtext; // do a search
+				}
+			});
+        } else { // or nothing
             var option = text.substr(1);
-            switch (option) {
-                case "d":
-                    window.location = "https://www.duckduckgo.com";
-                    break;
-                case "y":
-                    window.location = "https://www.youtube.com";
-                    break;
-                case "r":
-                    window.location = "https://reddit.com";
-                    break;
-                case "s":
-                    window.location = "https://open.spotify.com";
-                    break;
-            }
+			providers.forEach(p => {
+				if (option == p[0]) {
+					window.location = p[1] + subtext; // open the site root url
+				}
+			});
         }
     } else if (validURL(text)) {
         if (containsProtocol(text))

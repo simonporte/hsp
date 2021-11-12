@@ -94,7 +94,7 @@ Please note:
 
 Click the cog button on the top right
 
-### Add you own themes
+### Add your own themes
 
 These can be added in the `themes.yml` file. When changing the values of a theme, you need to reapply it from the menu.
 
@@ -108,6 +108,39 @@ themes:
       accent: "#5c5c5c"
 ```
 
+## Search engines
+
+This has to be set in two files.
+
+To show the details in the modal's table, edit `search-engines.yml` file.
+
+```yaml
+search-engines:
+    [...]
+  - name: "GitHub"
+    url: "https://github.com/search?q="
+    prefix: "gh"
+```
+
+Then to make the search work, edit `/src/js/search.js`.
+
+There is 3 values per serch engine :
+
+- shortcut to type before search
+- base url, this will be used when typing the shortcut without keyword after it
+- end of URL with query parameters
+
+Base and end of URL should be the same as in the `search-engines.yml` but splitted in two after the trailing slash of base URL.
+
+See example below.
+
+```javascript
+let providers = [
+    [...]
+	['gh','https://github.com/','search?q='],
+	[...]
+];
+```
 
 ---
 
@@ -128,7 +161,8 @@ Main changes :
 - HTTPS is not forced, HTTP/HTTPS is set for each app URL
 - Docker image use darkhttpd instead of busybox httpd
 - Can have multiple categories for apps and bookmarks (optional)
-- Can use image files instead of being limited to material design icons
+- Can use your own image files instead of material design icons
+- The prefix key for search shortcut is `!` (eg. !gh for GitHub)
 
 Visual comparison:
 
