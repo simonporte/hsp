@@ -1,12 +1,8 @@
 function date() {
+  // Date format is based on browser default locale
   let currentDate = new Date();
-  let dateOptions = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric"
-  };
-  let date = currentDate.toLocaleDateString("en-GB", dateOptions);
+  let locale = new Intl.DateTimeFormat().resolvedOptions();
+  let date = new Intl.DateTimeFormat(locale, { dateStyle: 'full'}).format(currentDate);
   document.getElementById("header_date").innerHTML = date;
 }
 
