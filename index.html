@@ -12,7 +12,7 @@
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </head>
 
-<body onload="loadFunctions()">
+<body>
 
     <section id="modal">
         <div id="modal-container">
@@ -78,7 +78,11 @@
 
         <section id="header">
             <h2 id="header_date"></h2>
-            <h1 id="header_greet"></h1>
+            <h1 id="greetings">
+                <script type="text/handlebars-template" id="greetings-template">
+                    {{print_greeting greetings}}
+                </script
+            </h1>
         </section>
 
         <section id="apps">

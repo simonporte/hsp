@@ -88,6 +88,19 @@ Please note:
 - Set the title for each collection of bookmarks in a category
 - Set `http://` or `https://` in the URL
 
+### Greetings
+
+To translate or change the greetings shown on top of the page, edit `greetings.yml`:
+
+```yaml
+
+```
+
+Please note:
+
+- Each greeting is shown from the time set until the next greeting time
+- Il you want to have a period of time without greeting, or no greeting at all, add a greeting with an empty string text
+
 ## Themes
 
 ### Changing color themes
