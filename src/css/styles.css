@@ -318,7 +318,7 @@ table a:hover{
 #modal>div{
     background-color: var(--color-background, white);
     border: 4px solid var(--color-text-pri,black);
-	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.25);
     margin-left: auto;
     margin-right: auto;
     padding: 2em;
@@ -380,13 +380,13 @@ table a:hover{
 /* THEMING */
 
 .color-scheme {
-	margin: 10px 15px;
+    margin: 10px 15px;
 }
 
 .palette {
-	display: flex;
-	width: 75px;
-	box-shadow: 0 0 0 2px var(--color-text-pri,black);
+    display: flex;
+    width: 75px;
+    box-shadow: 0 0 0 2px var(--color-text-pri,black);
 }
 
 .palette-color {
@@ -398,13 +398,41 @@ table a:hover{
 }
 
 .color-scheme:hover .palette {
-	box-shadow: 0 0 0 2px var(--color-text-acc,black);
+    box-shadow: 0 0 0 2px var(--color-text-acc,black);
 }
 
 .color-scheme:hover .palette-label {
     color: var(--color-text-acc,black);
 }
 
+/* SCROLLBARS */
+
+@media screen and (min-width: 400px) {
+
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    ::-webkit-scrollbar-track,
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: rgba(255,255,255,0.1);
+        /* Maybe find a way to change track opacity depending on theme dark/light (not system/browser color scheme) */
+        /* background-color: rgba(0,0,0,0.2); */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--color-text-pri,black);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--color-text-acc,black);
+    }
+
+}
 
 /* MEDIA QUERIES */
 
