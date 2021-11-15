@@ -7,4 +7,4 @@ services:
     ports:
       - 4000:80
     volumes:
-      - ./:/www/
+      - ./assets:/www/assets

@@ -15,7 +15,7 @@ Install an extension such as [New Tab Redirect
 
 ### Docker-compose
 
- - `git clone` this repository
+ - Download `dockerfile` and `docker-compose.yml`
  - Build and bring up with `docker-compose up -d`
  - The page should be available at `http://localhost:4000`
 
@@ -28,7 +28,7 @@ To run at a different port from 4000 or change the assets directory location, ed
       - ./assets:/www/assets
 ```
 
-For production purposes, it is advised to rename and replace `dockerfile.prod` to `dockerfile` and `docker-compose.prod.yml` to `docker-compose.yml`.
+For development purposes, you can clone the git repository or download the [latest release zip file](https://github.com/simonporte/hsp/archive/refs/heads/master.zip). Then rename and replace `dockerfile.dev` to `dockerfile` and `docker-compose.dev.yml` to `docker-compose.yml`.
 
 ### Web server
 
