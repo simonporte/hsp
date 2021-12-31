@@ -1,7 +1,7 @@
 FROM alpine:3.14
 RUN apk add --no-cache curl
 WORKDIR /home
-RUN curl -s -L -O "https://github.com/simonporte/hsp/archive/refs/heads/master.zip"
+ADD "https://github.com/simonporte/hsp/archive/refs/heads/master.zip" .
 RUN unzip master.zip
 
 FROM alpine:3.14

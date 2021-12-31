@@ -2,9 +2,11 @@
 
 *A home page for your server, that can be used as a new tab page*
 
-![screenshot](https://user-images.githubusercontent.com/32496803/135909895-da657913-edf5-443a-9449-7d76fb2e0f89.png)
+![screenshot](https://user-images.githubusercontent.com/32496803/147822597-230ea628-250f-4f52-9e2e-182a7dc0c07e.jpeg)
 
-[Available themes](https://imgur.com/a/FDVRIyw) - *Please note those screenshots are from original SUI and do not reflect all changes.*
+[**>>> DEMO page here <<<**](https://simonporte.github.io/hsp/)
+
+To apply a theme, click on the cog button on the top right corner.
 
 ## Set as new tab page
 
@@ -105,7 +107,7 @@ Please note:
 
 ### Changing color themes
 
-Click the cog button on the top right
+Click the cog button on the top right corner.
 
 ### Add your own themes
 

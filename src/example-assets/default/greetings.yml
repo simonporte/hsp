@@ -1,0 +1,9 @@
+greetings:
+  - start: 0
+    text: "Good night!"
+  - start: 6
+    text: "Good morning!"
+  - start: 12
+    text: "Good afternoon!"
+  - start: 18
+    text: "Good evening!"
