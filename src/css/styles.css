@@ -366,6 +366,15 @@ table a:hover{
     position: fixed;
 }
 
+#logo img{
+    top: 1vh;
+    left: 1vh;
+    position: fixed;
+	/* apps take 60% of width so logo should not exceed half of the remaining 40% */
+	/* should set better size and position on mobile */
+	max-width: 15%;
+}
+
 #themes{
     display: flex;
     flex-wrap: wrap;
