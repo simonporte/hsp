@@ -4,7 +4,8 @@
 
 ![screenshot](https://user-images.githubusercontent.com/32496803/147822597-230ea628-250f-4f52-9e2e-182a7dc0c07e.jpeg)
 
-[**>>> DEMO page here <<<**](https://simonporte.github.io/hsp/)
+[![Demo page](https://img.shields.io/badge/go%20to-demo%20page-blue)](https://simonporte.github.io/hsp/)
+[![Download](https://img.shields.io/badge/download-latest%20version-brightgreen)](https://github.com/simonporte/hsp/archive/refs/heads/master.zip)
 
 To apply a theme, click on the cog button on the top right corner.
 
@@ -38,9 +39,9 @@ You can use your own web server, just put the files as is and it should be good 
 
 ## Configuration
 
-Copy all the configuration files from `src`>`default-assets` to `assets`. You can alse use `example-assets` for specific use cases.
+Default configuration files are present in `assets`. There are other example configuration files in `src`>`example-assets` that you can copy to replace the ones in `assets`.
 
-If you use docker to run the page, the `entrypoint.sh` script does take care of this for you.
+If you use docker to run the page, the `entrypoint.sh` script copies configuration files from `src`>`example-assets`>`default` if they are missing in `assets`.
 
 All the configuration files mentioned below are those in `assets` directory.
 
@@ -95,7 +96,15 @@ Please note:
 To translate or change the greetings shown on top of the page, edit `greetings.yml`:
 
 ```yaml
-
+greetings:
+  - start: 0
+    text: "Good night!"
+  - start: 6
+    text: "Good morning!"
+  - start: 12
+    text: "Good afternoon!"
+  - start: 18
+    text: "Good evening!"
 ```
 
 Please note:
@@ -156,6 +165,10 @@ let providers = [
 	[...]
 ];
 ```
+
+## Logo
+
+If you want to add a logo to the page, put a `logo.png` in `assets` folder.
 
 ---
 
