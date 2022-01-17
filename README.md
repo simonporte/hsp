@@ -132,6 +132,10 @@ themes:
       accent: "#5c5c5c"
 ```
 
+### Custom styles
+
+You can add your own CSS rules in `assets`>`styles.css`
+
 ## Search engines
 
 This has to be set in two files.
