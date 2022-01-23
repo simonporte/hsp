@@ -1,4 +1,4 @@
-## HSP - Homelab StartPage
+# HSP - Homelab StartPage
 
 *A home page for your server, that can be used as a new tab page*
 
@@ -21,6 +21,8 @@ Install an extension such as [New Tab Redirect
  - Download `dockerfile` and `docker-compose.yml`
  - Build and bring up with `docker-compose up -d`
  - The page should be available at `http://localhost:4000`
+
+To update, run `docker-compose build` then `docker-compose up -d`. It will fetch and apply the latest changes on GitHub.
 
 To run at a different port from 4000 or change the assets directory location, edit `docker-compose.yml` (change left values):
 
@@ -174,6 +176,12 @@ let providers = [
 
 If you want to add a logo to the page, put a `logo.png` in `assets` folder.
 
+## Third party library used:
+- Icons: [Iconify](https://iconify.design/)
+- Templating: [Handlebars](https://handlebarsjs.com/)
+- YAML: [jeremyfa/yaml.js](https://github.com/jeremyfa/yaml.js)
+
+
 ---
 
 This project is a fork of [jeroenpardon/sui](https://github.com/jeroenpardon/sui), intended to fix its most obvious issues/limitations and add more features.
@@ -204,10 +212,3 @@ Startpage|![msedge_I5g2eORykU](https://user-images.githubusercontent.com/3249680
 Modal|![msedge_lwmod45PFb](https://user-images.githubusercontent.com/32496803/134809371-e37075d1-0a8a-4be7-87a6-99b3a1e7f776.png)|![msedge_rrEsBrjewZ](https://user-images.githubusercontent.com/32496803/134809362-791d076f-d89c-46e7-b479-c8b8011184da.png)
 Multiple categories|![msedge_RNRPBs6hzG](https://user-images.githubusercontent.com/32496803/135135100-aa87d629-f822-4545-808a-099a4c408274.png)|Feature not available
 Custom icons|![msedge_2WCbZh0NCL](https://user-images.githubusercontent.com/79142547/135339255-a11ff772-3558-4e10-947d-1049eb3d1295.png)|Feature not available
-
-
-
-
-YAML library used: [jeremyfa/yaml.js](https://github.com/jeremyfa/yaml.js)
-
----
