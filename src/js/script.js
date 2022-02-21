@@ -38,6 +38,6 @@ Handlebars.registerHelper('isAsset', function (icon) {
 // Close modal if click outside
 document.getElementById('modal').onclick = function(e) {
     if (!document.getElementById('modal-container').contains(e.target)){
-        window.location = "#";
+        window.location.hash = "#";
     }
 }
