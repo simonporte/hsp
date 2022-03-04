@@ -25,43 +25,52 @@
             </header>
 
             <div id="modal-content">
-                <h2>Color themes</h2>
 
-                <section id="themes">
-                    <script type="text/handlebars-template" id="themes-template">
-                        {{#themes}}
-                        <div data-theme="{{id}}" class="color-scheme theme-{{id}}" onclick="setTheme({'color-background': '{{colors.background}}','color-text-pri': '{{colors.primary}}','color-text-acc': '{{colors.accent}}'});">
-                            <div class="palette">
-                                <span class="palette-color" style="background-color: {{colors.background}};"></span>
-                                <span class="palette-color" style="background-color: {{colors.primary}};"></span>
-                                <span class="palette-color" style="background-color: {{colors.accent}};"></span>
-                            </div>
-                            <div class="palette-label">
-                                {{{name}}}
-                            </div>
-                        </div>   
-                        {{/themes}}    
-                    </script>
-                </section>
+                <div class="tabs">
+                    <input type="radio" name="tabs" id="tab1" checked="checked">
+                    <label for="tab1">Color themes</label>
+                    <div class="tab-content">
+                        <section id="themes">
+                            <script type="text/handlebars-template" id="themes-template">
+                                {{#themes}}
+                                <div data-theme="{{id}}" class="color-scheme theme-{{id}}" onclick="setTheme({'color-background': '{{colors.background}}','color-text-pri': '{{colors.primary}}','color-text-acc': '{{colors.accent}}'});">
+                                    <div class="palette">
+                                        <span class="palette-color" style="background-color: {{colors.background}};"></span>
+                                        <span class="palette-color" style="background-color: {{colors.primary}};"></span>
+                                        <span class="palette-color" style="background-color: {{colors.accent}};"></span>
+                                    </div>
+                                    <div class="palette-label">
+                                        {{{name}}}
+                                    </div>
+                                </div>   
+                                {{/themes}}    
+                            </script>
+                        </section>
+                    </div>
 
-                <h2>Search options</h2>
+                    <input type="radio" name="tabs" id="tab2">
+                    <label for="tab2">Search options</label>
+                    <div class="tab-content">
 
-                <section id="search-engines">
-                    <script type="text/handlebars-template" id="search-engines-template">
-                        <table>
-                            <tr>
-                                <th>Website</th>
-                                <th>Prefix</th>
-                            </tr>
-                            {{#search-engines}}
-                            <tr>
-                                <td><a href="{{url}}">{{name}}</a></td>
-                                <td>!{{prefix}}</td>
-                            </tr>
-                            {{/search-engines}}
-                        </table>
-                    </script>
-                </section>
+                        <section id="search-engines">
+                            <script type="text/handlebars-template" id="search-engines-template">
+                                <table>
+                                    <tr>
+                                        <th>Website</th>
+                                        <th>Prefix</th>
+                                    </tr>
+                                    {{#search-engines}}
+                                    <tr>
+                                        <td><a href="{{url}}">{{name}}</a></td>
+                                        <td>!{{prefix}}</td>
+                                    </tr>
+                                    {{/search-engines}}
+                                </table>
+                            </script>
+                        </section>
+                        
+                    </div>
+                </div>
             </div>
 
             <footer id="modal-footer">
@@ -82,7 +91,7 @@
             <h1 id="greetings">
                 <script type="text/handlebars-template" id="greetings-template">
                     {{print_greeting greetings}}
-                </script
+                </script>
             </h1>
         </section>
 

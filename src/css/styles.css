@@ -96,6 +96,7 @@ img.icon{
 
 .btn:hover{
     color: var(--color-text-acc);
+    cursor: pointer;
 }
 
 
@@ -342,10 +343,6 @@ table a:hover{
     margin-bottom: 0;
 }
 
-#modal h2{
-    margin-top:1.5em;
-}
-
 #modal-header{
     display:flex;
     justify-content: space-between;
@@ -390,6 +387,7 @@ table a:hover{
 
 .color-scheme {
     margin: 10px 15px;
+    cursor: pointer;
 }
 
 .palette {
@@ -544,5 +542,63 @@ table a:hover{
 @media only screen and (max-width: 400px) {
     .app-address {
         display: none;
+    }
+}
+
+/* MODAL TABS */
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+}
+   
+.tabs label {
+    padding: 1em ;
+    margin-right: 0.2em;
+    cursor: pointer;
+    border-bottom: 4px solid var(--color-text-pri,black);
+    text-transform: uppercase;
+}
+
+.tabs label:hover {
+    color: var(--color-text-acc);
+}
+   
+.tabs .tab-content {
+    order: 99;
+    width: 100%;
+    display: none;
+}
+   
+.tabs input[type="radio"] {
+    display: none;
+}
+   
+.tabs input[type="radio"]:checked + label {
+    border-bottom: 4px solid var(--color-text-acc,black);
+}
+   
+.tabs input[type="radio"]:checked + label + .tab-content {
+    display: block;
+}
+   
+
+@media (min-width: 400px) {
+    .tabs label {
+        flex: 1;
+        min-width: 25%;
+        margin-bottom: 1.5em;
+    }
+}
+
+@media (max-width: 400px) {
+    .tabs label {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 0.2rem;
+        text-align: center;
+    }
+    .tabs label:last-of-type {
+        margin-bottom: 1.5em;
     }
 }
