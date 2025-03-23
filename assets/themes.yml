@@ -1,4 +1,10 @@
 themes:
+  - id: "default"
+    name: "Default"
+    colors:
+      background: "#ffffff"
+      primary: "#000000"
+      accent: "#000000"
   - id: "blackboard"
     name: "Blackboard"
     colors:
