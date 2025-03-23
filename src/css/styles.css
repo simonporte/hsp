@@ -602,3 +602,7 @@ table a:hover{
         margin-bottom: 1.5em;
     }
 }
+
+section > :not(input) {
+	caret-color: transparent;
+}
