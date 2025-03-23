@@ -27,6 +27,10 @@ Handlebars.registerHelper('strip-protocol', function (url) {
     return url.replace(/.*[/]{2}/s,'')
 })
 
+Handlebars.registerHelper('getID', function (id) {
+    return id.replace(/[-\ ]/g,'_').toLowerCase()
+})
+
 Handlebars.registerHelper('isAsset', function (icon) {
     // The logic here is perhaps a bit too simplistic
     // Check the presence of a dot in icon name

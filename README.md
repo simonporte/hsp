@@ -2,7 +2,7 @@
 
 *A home page for your server, that can be used as a new tab page*
 
-![screenshot](https://user-images.githubusercontent.com/32496803/147822597-230ea628-250f-4f52-9e2e-182a7dc0c07e.jpeg)
+![screenshot](https://github.com/user-attachments/assets/0153f7d6-5d37-49e2-b3a2-cfd4d9978922)
 
 [![Demo page](https://img.shields.io/badge/go%20to-demo%20page-blue)](https://simonporte.github.io/hsp/)
 [![Download](https://img.shields.io/badge/download-latest%20version-brightgreen)](https://github.com/simonporte/hsp/archive/refs/heads/master.zip)
@@ -59,11 +59,21 @@ apps:
         url: "http://subs.example.com"
         icon: "message-video"
         target: "_blank"
+  - category: "Files"
+    links:
+      - name: "CloudCMD"
+        icon: "cloudcmd.png"
+        sublinks:
+          - name: "CloudCMD 1"
+            url: "http://files1.example.com"
+          - name: "CloudCMD 2"
+            url: "http://files2.example.com"
 ```
 
 Please note:
 
 - You can use only one category if you want
+- Using sublinks instead of url will show a combobox
 - Set `http://` or `https://` in the URL
 - Images must be in `assets`>`icons`, just put the full name of the image with extension : e.g. `myimage.png`
 - Instead, if you want to use an icon from the Material Design Icons library, find its name [here](https://materialdesignicons.com/)
@@ -181,34 +191,21 @@ If you want to add a logo to the page, put a `logo.png` in `assets` folder.
 - Templating: [Handlebars](https://handlebarsjs.com/)
 - YAML: [jeremyfa/yaml.js](https://github.com/jeremyfa/yaml.js)
 
+## Main differences with the original project
 
----
-
-This project is a fork of [jeroenpardon/sui](https://github.com/jeroenpardon/sui), intended to fix its most obvious issues/limitations and add more features.
-
-The readme will be updated to reflect the changes that are made or planned.
-
-Please feel free to open an issue if you have any request or suggestion.
-
-Pull Request are welcome but I would prefer that you open an issue first.
+This project is a fork of [jeroenpardon/sui](https://github.com/jeroenpardon/sui).
 
 Main changes :
 
+- Even though it is intended to be served by a web server, you can save the page from any browser to get a static copy while retaining most functionalities
 - Configuration files changed from JSON to YAML
-- Icon of modal is top right instead of bottom left
-- Theme is applied to modal
-- Themes list is no longer hard-coded but set in a dedicated configuration file : `themes.yml`
-- HTTPS is not forced, HTTP/HTTPS is set for each app URL
-- Docker image use darkhttpd instead of busybox httpd
 - Can have multiple categories for apps and bookmarks (optional)
 - Can use your own image files instead of material design icons
+- Can set multiple links for a single app (sublinks)
+- Icon of modal is top right instead of bottom left
+- Theme is applied to modal
+- Multi-tabbed modal
+- Themes list is no longer hard-coded but set in a dedicated configuration file : `themes.yml`
+- HTTPS is not forced, HTTP/HTTPS is set for each app URL
 - The prefix key for search shortcut is `!` (eg. !gh for GitHub)
-
-Visual comparison:
-
-Project|HSP|SUI
--|-|-
-Startpage|![msedge_I5g2eORykU](https://user-images.githubusercontent.com/32496803/134809624-c21f29c8-c9f6-429c-b09b-7d02de9c7f32.png)|![msedge_xqXs2wrICG](https://user-images.githubusercontent.com/32496803/134809359-5baee52c-b57e-400f-9ecd-8344074a8909.png)
-Modal|![msedge_lwmod45PFb](https://user-images.githubusercontent.com/32496803/134809371-e37075d1-0a8a-4be7-87a6-99b3a1e7f776.png)|![msedge_rrEsBrjewZ](https://user-images.githubusercontent.com/32496803/134809362-791d076f-d89c-46e7-b479-c8b8011184da.png)
-Multiple categories|![msedge_RNRPBs6hzG](https://user-images.githubusercontent.com/32496803/135135100-aa87d629-f822-4545-808a-099a4c408274.png)|Feature not available
-Custom icons|![msedge_2WCbZh0NCL](https://user-images.githubusercontent.com/79142547/135339255-a11ff772-3558-4e10-947d-1049eb3d1295.png)|Feature not available
+- Docker image use darkhttpd instead of busybox httpd

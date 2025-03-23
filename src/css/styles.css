@@ -606,3 +606,7 @@ table a:hover{
 section > :not(input) {
 	caret-color: transparent;
 }
+
+select {
+  border: 1px solid var(--color-text-pri);
+}

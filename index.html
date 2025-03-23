@@ -101,7 +101,7 @@
             <h3>{{category}}</h3>
             <div class="apps_loop">
                 {{#links}}
-                <a href="{{url}}" {{#if target}}target="{{target}}"{{/if}} >
+                <a {{#unless sublinks}}{{#if url}}href="{{url}}"{{/if}} {{#if target}}target="{{target}}"{{/if}}{{/unless}} >
                     <div class="apps_item">
                         <div class="apps_icon">
                             {{#if (isAsset icon)}}
@@ -112,7 +112,22 @@
                         </div>
                         <div class="apps_text">
                             <span class="app-name">{{name}}</span>
+                            {{#if url}}
                             <span class="app-address">{{strip-protocol url}}</span>
+                            {{/if}}
+                            {{#if sublinks}}
+                                <form name="form_{{getID name}}_{{@key}}">
+                                    <div style="display:flex;">
+                                        <select name="sublinks_{{getID name}}_{{@key}}" id="sublinks_{{getID name}}_{{@key}}" style="background-color:var(--color-background);color:var(--color-text-acc);" onchange="window.location.href=document.form_{{getID name}}_{{@key}}.sublinks_{{getID name}}_{{@key}}.options[document.form_{{getID name}}_{{@key}}.sublinks_{{getID name}}_{{@key}}.selectedIndex].value">
+                                        <option disabled selected style="display:none" value="">Select</option>
+
+                                        {{#sublinks}}
+                                            <option value="{{url}}">{{name}}</option>
+                                        {{/sublinks}}
+                                        </select>
+                                    </div>
+                                </form>
+                            {{/if}}
                         </div>
                     </div>
                 </a>
